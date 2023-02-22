@@ -29,7 +29,7 @@ const ToggleWrapper = styled.div`
   top: 8px;
   left: 8px;
   width: 22px;
-  height: 21px;
+  height: 22px;
   background-color: #fd9129;
   transform: scale(1);
   border-radius: 50%;
@@ -55,7 +55,7 @@ const StartOne = styled.div`
 const StartTwo = styled.div`
   ${star}
   position: absolute;
-  transform: rotateZ(36deg);
+  transform: rotateZ(40deg);
 `;
 
 const MoonWrapper = styled.div`
@@ -115,8 +115,8 @@ const Toggle = ({ theme, toggleTheme }: ToggleProps) => {
 
       <ToggleLabel htmlFor="toggle_checkbox">
         <ToggleWrapper id="star">
-          <StartOne id="star-1">★</StartOne>
-          <StartTwo id="star-2">★</StartTwo>
+          {/* <StartOne id="star-1">★</StartOne> */}
+          {/* <StartTwo id="star-2">★</StartTwo> */}
         </ToggleWrapper>
         <MoonWrapper id="moon"></MoonWrapper>
       </ToggleLabel>
