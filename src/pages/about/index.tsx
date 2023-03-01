@@ -3,9 +3,10 @@ import Toggle from "@/components/Toggler";
 import { useEffect } from "react";
 import HeadSEO from "@/components/SEO/HeadSeo";
 import LayoutSubpage from "@/components/Layout/Subpage";
-import styled, { css } from "styled-components";
+import styled, { css, CSSProp } from "styled-components";
 import SectionTitle from "@/components/SectionTitle";
 import { tablet } from "@/components/theme/MediaQuery";
+import Image from "next/image";
 
 const AboutSection = styled.div`
   height: 100%;
@@ -23,12 +24,13 @@ const AboutSection = styled.div`
   ${tablet(css`
     padding: 20px;
   `)}
+  color: ${({ theme }) => theme.psection};
 `;
 
 const BorderSection = styled.div`
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   background-color: transparent;
   top: 20px;
   left: 20px;
@@ -40,20 +42,200 @@ const BorderSection = styled.div`
   `)}
 `;
 
+const SectionInner = styled.div`
+  position: relative;
+  padding: 20px 60px 50px;
+  ${tablet(css`
+    padding: 5px 20px;
+  `)}
+`;
+
+const BoxImageHeader = styled.div`
+  width: 100%;
+  height: 270px;
+  border-radius: 5px;
+  transition: all 0.3s linear;
+  background-color: ${({ theme }) => theme.bgavatar};
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  ${tablet(css`
+    width: 100%;
+  `)}
+`;
+
+const GridAbout = styled.div`
+  margin-bottom: 30px;
+`;
+
+const TitleAbout = styled.h3`
+  font-size: 20px;
+  color: ${({ theme }) => theme.h3section};
+`;
+
+const TextAbout = styled.p`
+  font-size: 14px;
+  color: ${({ theme }) => theme.psection};
+`;
+
+const UlInfo = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+`;
+
+const LiInfo = styled.li`
+  padding: 5px 0;
+  font-size: 14px;
+  &:first-child {
+    padding-top: 0;
+  }
+`;
+
+const borderSpanOne = css`
+  &::after {
+    transition: all 0.3s linear;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: -3px;
+    background-color: ${({ theme }) => theme.textglobal};
+  }
+`;
+
+const borderSpanTwo = css`
+  &::after {
+    transition: all 0.3s linear;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: -3px;
+    background-color: ${({ theme }) => theme.textglobal};
+  }
+`;
+
+interface SpanBorder {
+  css: CSSProp;
+}
+
+const SpanInfoTitle = styled.span<SpanBorder>`
+  font-size: 14px;
+  color: ${({ theme }) => theme.h3section};
+  font-weight: bold;
+  margin-right: 12px;
+  display: inline-block;
+  transition: all 0.3s linear;
+  ${(props) => props.css}
+`;
+
+const SpanInfoValue = styled.span`
+  min-width: 250px;
+`;
+
+const AInfo = styled.a`
+  color: ${({ theme }) => theme.textglobal};
+  text-decoration: none;
+  outline: none;
+  transition: all 0.3s linear;
+`;
+
+const BlockTitle = styled.h1`
+  display: inline-block;
+  position: relative;
+  margin: 0 0 20px;
+  padding: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: ${({ theme }) => theme.h3section};
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: -10px;
+    bottom: 0;
+    background-color: ${({ theme }) => theme.textglobal};
+  }
+`;
 
 const About = () => {
   return (
     <>
       <HeadSEO title="About" />
-      {/* <LayoutSubpage> */}
-        <AboutSection>
-          <BorderSection />
+      <AboutSection>
+        <BorderSection />
+        <SectionInner>
           <SectionTitle
             title="Tentang Saya"
             textBadge="Web Developver, Mahasiswa"
           />
-        </AboutSection>
-      {/* </LayoutSubpage> */}
+          <div className="row gx-5">
+            <GridAbout className="col-sm-6 col-md-6 col-lg-4">
+              <BoxImageHeader>
+                <Image
+                  width={250}
+                  height={250}
+                  alt="_image_avt"
+                  src={"/images/avatar-img.png"}
+                />
+              </BoxImageHeader>
+            </GridAbout>
+            <div className="col-sm-6 col-md-6 col-lg-8 row">
+              <div className="col-lg-6">
+                <TitleAbout>Seorang mahasiswa sambil kerja</TitleAbout>
+                <TextAbout>
+                  Saya kerja part-time di salah satu perusahaan di Jakarta
+                  sebagai Front-End Web Developer, memiliki pengalaman kurang
+                  lebih 1 Tahun dibidang tersebut. Sebagai seorang developer
+                  kita dituntut untuk selalu belajar hal baru, supaya bisa
+                  mengikuti jaman.
+                </TextAbout>
+                <TextAbout>
+                  Saya mahasiswa semester akhir di Universitas Islam kalimantan
+                  Muhammad Arsyad Al-Banjari Banjarmasin, dengan jurusan Teknik
+                  Informatika.
+                </TextAbout>
+              </div>
+              <GridAbout className="col-lg-6">
+                <UlInfo>
+                  <LiInfo>
+                    <SpanInfoTitle css={borderSpanOne}>Umur</SpanInfoTitle>
+                    <SpanInfoValue>23 Tahun</SpanInfoValue>
+                  </LiInfo>
+                  <LiInfo>
+                    <SpanInfoTitle css={borderSpanTwo}>Alamat</SpanInfoTitle>
+                    <SpanInfoValue>
+                      Jl. A Yani Km.22, Banjarbaru, Kalimantan Selatan
+                    </SpanInfoValue>
+                  </LiInfo>
+                  <LiInfo>
+                    <SpanInfoTitle css={borderSpanOne}>Negara</SpanInfoTitle>
+                    <SpanInfoValue>Indonesia</SpanInfoValue>
+                  </LiInfo>
+                  <LiInfo>
+                    <SpanInfoTitle css={borderSpanTwo}>Email</SpanInfoTitle>
+                    <SpanInfoValue>
+                      <AInfo href="mailto:ahmadinur2202@gmail.com">
+                        ahmadinur2202@gmail.com
+                      </AInfo>
+                    </SpanInfoValue>
+                  </LiInfo>
+                  <LiInfo>
+                    <SpanInfoTitle css={borderSpanTwo}>Nomor HP</SpanInfoTitle>
+                    <SpanInfoValue>+62 878 0066 9682</SpanInfoValue>
+                  </LiInfo>
+                </UlInfo>
+              </GridAbout>
+            </div>
+          </div>
+          <BlockTitle>Pelayanan</BlockTitle>
+        </SectionInner>
+      </AboutSection>
     </>
   );
 };

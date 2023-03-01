@@ -45,7 +45,7 @@ const BorderSection = styled.div`
 const Blog: NextPage = () => {
   return (
     <>
-      <HeadSEO title="Resume" />
+      <HeadSEO title="Blog" />
       {/* <LayoutSubpage> */}
         <BlogSection
           

@@ -13,5 +13,7 @@ declare module "styled-components" {
     textglobal: string;
     borderlink: string;
     titlesection: string;
+    h3section: string;
+    psection: string;
   }
 }

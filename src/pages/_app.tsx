@@ -6,6 +6,7 @@ import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import {AnimatePresence} from 'framer-motion'
 import LayoutSubpage from "@/components/Layout/Subpage";
+import "bootstrap/dist/css/bootstrap.css";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter()

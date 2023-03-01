@@ -5,12 +5,14 @@ const WrapperTitle = styled.div`
   width: max-content;
   display: inline-block;
   position: relative;
+  margin-bottom: 60px;
 `;
 
 const TitleSection = styled.h1`
   display: block;
   position: relative;
-  margin: 30px 0 0;
+  margin: 20px 0 0;
+  font-weight: bold;
   font-size: 60px;
   line-height: 1.1em;
   text-align: center;
@@ -27,7 +29,7 @@ const BadgeTitle = styled.p`
   padding-inline: 10px;
   padding-block: 2px;
   position: absolute;
-  bottom: -30px;
+  bottom: -38px;
   right: 0px;
   background-color: ${({ theme }) => theme.textglobal};
   color: white;

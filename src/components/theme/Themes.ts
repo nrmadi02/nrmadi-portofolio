@@ -7,7 +7,9 @@ export const lightTheme = {
   bgimage: `url("https://lmpixels.com/demo/unique/unique-vcard/images/bg.png")`,
   textglobal: "#ff724c",
   borderlink: "rgba(59, 59, 59, 0.126)",
-  titlesection: "#424242"
+  titlesection: "#424242",
+  h3section: "#222222",
+  psection: "#555555",
 };
 export const darkTheme = {
   body: "#222",
@@ -19,4 +21,7 @@ export const darkTheme = {
   textglobal: "#4d91de",
   borderlink: "rgba(255, 255, 255, 0.12)",
   titlesection: "#555555",
+  h3section: "#ffffff",
+  psection: "#e5e5e5",
 };
+

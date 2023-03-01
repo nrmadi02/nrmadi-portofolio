@@ -44,7 +44,7 @@ const BorderSection = styled.div`
 const Portofolio: NextPage = () => {
   return (
     <>
-      <HeadSEO title="Resume" />
+      <HeadSEO title="Portofolio" />
       
         <PortofolioSection>
           <BorderSection />

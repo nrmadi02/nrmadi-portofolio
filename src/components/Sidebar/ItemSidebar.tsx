@@ -11,8 +11,8 @@ const StyledLink = styled(Link)`
   padding: 10px 20px;
   text-align: center;
   color: ${({ theme }) => theme.text};
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 17px;
+  font-weight: 300;
   /* position: relative; */
   text-decoration: none !important;
   outline: none;
@@ -56,6 +56,7 @@ const LIItem = styled.li<ActiveLink>`
         transition: all 0.3s linear;
         background-color: transparent;
         opacity: 1;
+        font-weight: 500;
       }
 
       padding-left: 4px;
@@ -68,6 +69,7 @@ const LIItem = styled.li<ActiveLink>`
 
 const LiIcon = styled.i`
   list-style: none;
+  font-weight: 300;
 `;
 
 interface CustomLinkProps {

@@ -44,7 +44,7 @@ const BorderSection = styled.div`
 const Contact: NextPage = () => {
   return (
     <>
-      <HeadSEO title="Resume" />
+      <HeadSEO title="Contact" />
       {/* <LayoutSubpage> */}
         <ContactSection>
           <BorderSection />

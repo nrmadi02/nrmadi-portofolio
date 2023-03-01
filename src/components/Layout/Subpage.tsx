@@ -12,6 +12,7 @@ const LayoutSubpageWrapper = styled(motion.div)`
   -webkit-perspective: 1500px;
   -moz-perspective: 1500px;
   perspective: 1500px;
+  max-width: 1240px;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
