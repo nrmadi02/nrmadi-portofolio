@@ -70,6 +70,8 @@ const LIItem = styled.li<ActiveLink>`
 const LiIcon = styled.i`
   list-style: none;
   font-weight: 300;
+  transition: all 0.3s linear;
+  color: ${({theme}) => theme.iconsidebar};
 `;
 
 interface CustomLinkProps {

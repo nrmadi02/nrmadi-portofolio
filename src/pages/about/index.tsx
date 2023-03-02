@@ -7,6 +7,7 @@ import styled, { css, CSSProp } from "styled-components";
 import SectionTitle from "@/components/SectionTitle";
 import { tablet } from "@/components/theme/MediaQuery";
 import Image from "next/image";
+import { FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const AboutSection = styled.div`
   height: 100%;
@@ -163,6 +164,44 @@ const BlockTitle = styled.h1`
   }
 `;
 
+const SocmedWrapper = styled.ul`
+  display: flex;
+  list-style: none;
+  margin: 25px 0 5px;
+  padding: 0;
+  text-align: left;
+  gap: 5px;
+  flex-wrap: wrap;
+`;
+
+const ItemSocmed = styled.a`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1px;
+  width: 34px;
+  height: 34px;
+  color: ${({ theme }) => theme.psection};
+  background-color: transparent;
+  text-align: center;
+  transition: all 0.3s linear;
+  border: 1px solid ${({ theme }) => theme.borderlink};
+  &:hover {
+    cursor: pointer;
+    background-color: ${({ theme }) => theme.textglobal};
+    color: white;
+  }
+`;
+
+const ItemService = styled.div`
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+`
+
 const About = () => {
   return (
     <>
@@ -230,10 +269,59 @@ const About = () => {
                     <SpanInfoValue>+62 878 0066 9682</SpanInfoValue>
                   </LiInfo>
                 </UlInfo>
+                <SocmedWrapper>
+                  <li>
+                    <ItemSocmed>
+                      <FaTwitter size={20} />
+                    </ItemSocmed>
+                  </li>
+                  <li>
+                    <ItemSocmed>
+                      <FaGithub size={20} />
+                    </ItemSocmed>
+                  </li>
+                  <li>
+                    <ItemSocmed>
+                      <FaInstagram size={20} />
+                    </ItemSocmed>
+                  </li>
+                  <li>
+                    <ItemSocmed>
+                      <FaFacebook size={20} />
+                    </ItemSocmed>
+                  </li>
+                </SocmedWrapper>
               </GridAbout>
             </div>
           </div>
           <BlockTitle>Pelayanan</BlockTitle>
+          <div className="row mt-3">
+            <ItemService className="col-sm-6 col-md-3">
+              <Image
+                alt="_icon"
+                width={100}
+                height={100}
+                src={"/images/web_icon.png"}
+              />
+              <TitleAbout className="mt-3">Web Developer</TitleAbout>
+              <p>
+                Melayani pembuatan website dari beberapa bahasa pemrograman,
+                seperti PHP dan Javascript.
+              </p>
+            </ItemService>
+            <ItemService className="col-sm-6 col-md-3">
+              <Image
+                alt="_icon"
+                width={100}
+                height={100}
+                src={"/images/creativity_icon.png"}
+              />
+              <TitleAbout className="mt-3">Joki Tugas</TitleAbout>
+              <p>
+                Melayani pengerjaan tugas sekolah dan kampus yang berkaitan dengan bidang IT.
+              </p>
+            </ItemService>
+          </div>
         </SectionInner>
       </AboutSection>
     </>

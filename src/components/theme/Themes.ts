@@ -10,6 +10,7 @@ export const lightTheme = {
   titlesection: "#424242",
   h3section: "#222222",
   psection: "#555555",
+  iconsidebar: "#ff724c",
 };
 export const darkTheme = {
   body: "#222",
@@ -23,5 +24,6 @@ export const darkTheme = {
   titlesection: "#555555",
   h3section: "#ffffff",
   psection: "#e5e5e5",
+  iconsidebar: "#FAFAFA",
 };
 

@@ -15,5 +15,6 @@ declare module "styled-components" {
     titlesection: string;
     h3section: string;
     psection: string;
+    iconsidebar: string;
   }
 }
