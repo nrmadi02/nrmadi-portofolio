@@ -226,7 +226,7 @@ const About = () => {
             </GridAbout>
             <div className="col-sm-6 col-md-6 col-lg-8 row">
               <div className="col-lg-6">
-                <TitleAbout>Seorang mahasiswa sambil kerja</TitleAbout>
+                <TitleAbout>Halo... Saya Nur Ahmadi</TitleAbout>
                 <TextAbout>
                   Saya kerja part-time di salah satu perusahaan di Jakarta
                   sebagai Front-End Web Developer, memiliki pengalaman kurang
