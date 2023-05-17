@@ -50,7 +50,7 @@ const Resume: NextPage = () => {
           <BorderSection />
           <SectionTitle
             title="Resume Saya"
-            textBadge="Pengalaman 1,5 tahun"
+            textBadge="Terus belajar"
           />
         </ResumeSection>
       {/* </LayoutSubpage> */}

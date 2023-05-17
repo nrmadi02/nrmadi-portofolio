@@ -8,6 +8,7 @@ import SectionTitle from "@/components/SectionTitle";
 import { tablet } from "@/components/theme/MediaQuery";
 import Image from "next/image";
 import { FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
+import Link from "next/link";
 
 const AboutSection = styled.div`
   height: 100%;
@@ -54,10 +55,10 @@ const SectionInner = styled.div`
 const BoxImageHeader = styled.div`
   width: 100%;
   height: 270px;
+  overflow: hidden;
   border-radius: 5px;
   transition: all 0.3s linear;
-  background-color: ${({ theme }) => theme.bgavatar};
-  padding: 3px;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,10 +218,11 @@ const About = () => {
             <GridAbout className="col-sm-6 col-md-6 col-lg-4">
               <BoxImageHeader>
                 <Image
+                style={{objectFit: 'cover'}}
                   width={250}
-                  height={250}
+                  height={300}
                   alt="_image_avt"
-                  src={"/images/avatar-img.png"}
+                  src={"/images/saya.png"}
                 />
               </BoxImageHeader>
             </GridAbout>
@@ -228,16 +230,21 @@ const About = () => {
               <div className="col-lg-6">
                 <TitleAbout>Halo... Saya Nur Ahmadi</TitleAbout>
                 <TextAbout>
-                  Saya kerja part-time di salah satu perusahaan di Jakarta
-                  sebagai Front-End Web Developer, memiliki pengalaman kurang
-                  lebih 1 Tahun dibidang tersebut. Sebagai seorang developer
-                  kita dituntut untuk selalu belajar hal baru, supaya bisa
-                  mengikuti jaman.
+                  Saya senang sekali belajar koding, terlebih khusus dalam
+                  pembuatan website dan software aplikasi. Bahasa yang sering
+                  saya gunakan yaitu Javascript, tapi sekarang sudah mulai
+                  belajar Typescript sebagai bekal buat kedepannya. Tidak
+                  sedikit kesulitan saya dapatkan dalam belajar koding, dari bug
+                  yang sulit dipecahkan, hingga error yang tak kunjung
+                  diselesaikan.
                 </TextAbout>
                 <TextAbout>
-                  Saya mahasiswa semester akhir di Universitas Islam kalimantan
-                  Muhammad Arsyad Al-Banjari Banjarmasin, dengan jurusan Teknik
-                  Informatika.
+                  Saya juga mahasiswa semester akhir di Universitas Islam
+                  kalimantan Muhammad Arsyad Al-Banjari Banjarmasin, dengan
+                  jurusan Teknik Informatika. Selama berkuliah saya mendapatkan
+                  banyak pengalaman, salah satunya menjadi seorang freelance
+                  website developver. Bisa kuliah, kerja dirumah dan
+                  menghasilkan uang.
                 </TextAbout>
               </div>
               <GridAbout className="col-lg-6">
@@ -271,24 +278,48 @@ const About = () => {
                 </UlInfo>
                 <SocmedWrapper>
                   <li>
-                    <ItemSocmed>
-                      <FaTwitter size={20} />
-                    </ItemSocmed>
+                    <a
+                      target="_blank"
+                      href="https://twitter.com/nrmadi02"
+                      rel="noopener noreferrer"
+                    >
+                      <ItemSocmed>
+                        <FaTwitter size={20} />
+                      </ItemSocmed>
+                    </a>
                   </li>
                   <li>
-                    <ItemSocmed>
-                      <FaGithub size={20} />
-                    </ItemSocmed>
+                    <a
+                      target="_blank"
+                      href="https://github.com/nrmadi02"
+                      rel="noopener noreferrer"
+                    >
+                      <ItemSocmed>
+                        <FaGithub size={20} />
+                      </ItemSocmed>
+                    </a>
                   </li>
                   <li>
-                    <ItemSocmed>
-                      <FaInstagram size={20} />
-                    </ItemSocmed>
+                    <a
+                      target="_blank"
+                      href="https://www.instagram.com/nrmadi02/?igshid=MzNlNGNkZWQ4Mg=="
+                      rel="noopener noreferrer"
+                    >
+                      <ItemSocmed>
+                        <FaInstagram size={20} />
+                      </ItemSocmed>
+                    </a>
                   </li>
                   <li>
-                    <ItemSocmed>
-                      <FaFacebook size={20} />
-                    </ItemSocmed>
+                    <a
+                      target="_blank"
+                      href="https://web.facebook.com/ilham.ziqry?_rdc=1&_rdr"
+                      rel="noopener noreferrer"
+                    >
+                      <ItemSocmed>
+                        <FaFacebook size={20} />
+                      </ItemSocmed>
+                    </a>
                   </li>
                 </SocmedWrapper>
               </GridAbout>
@@ -318,7 +349,8 @@ const About = () => {
               />
               <TitleAbout className="mt-3">Joki Tugas</TitleAbout>
               <p>
-                Melayani pengerjaan tugas sekolah dan kampus yang berkaitan dengan bidang IT.
+                Melayani pengerjaan tugas sekolah dan kampus yang berkaitan
+                dengan bidang IT.
               </p>
             </ItemService>
           </div>

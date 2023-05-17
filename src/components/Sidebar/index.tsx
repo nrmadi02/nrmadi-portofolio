@@ -76,11 +76,11 @@ const ContentHeader = styled.div`
 
 const BoxImageHeader = styled.div`
   width: 100px;
-  height: 100px;
+  height: 90px;
+  overflow: hidden;
   border-radius: 5px;
   transition: all 0.3s linear;
-  background-color: ${({ theme }) => theme.bgavatar};
-  padding: 3px;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,10 +161,10 @@ const Sidebar = ({ theme }: Props) => {
         <ContentHeader>
           <BoxImageHeader>
             <Image
-              width="90"
+              width="80"
               height="90"
               alt="_image_avt"
-              src={"/images/avatar-img.png"}
+              src={"/images/saya.png"}
             />
           </BoxImageHeader>
           <NameTag>Nur Ahmadi</NameTag>

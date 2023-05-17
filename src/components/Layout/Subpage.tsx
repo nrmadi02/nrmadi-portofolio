@@ -169,7 +169,6 @@ const VariantContact = {
 
 const LayoutSubpage = ({ children }: Props) => {
   const router = useRouter();
-  console.log(router.asPath);
   const variantType = (e: string): Variants | undefined => {
     type tplotOptions = {
       [key: string]: any;
